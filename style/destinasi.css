@@ -13,7 +13,7 @@ header nav{
 	margin-top: -5px;
 	font-weight: bold;
 	position: fixed;
-	z-index: 2;
+	z-index: 3;
 	width: 100%;
 	background-color: white;
 	margin-bottom: 50px;
@@ -262,7 +262,7 @@ main div.login-card{
 	padding: 30px;
 	padding-top: 50px;
 	height: 450px;
-	position: absolute;
+	position: fixed;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	z-index: 2;
 	right: 20px;

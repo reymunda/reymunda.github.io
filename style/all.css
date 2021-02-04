@@ -1,0 +1,185 @@
+body{
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	margin: 0;
+	overflow-x: hidden;
+}
+header nav{
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+	padding: 0px 50px;
+	margin-top: -5px;
+	font-weight: bold;
+	position: fixed;
+	z-index: 3;
+	width: 100%;
+	background-color: white;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+header nav h1{
+	font-family: Lora;
+	color: #6fa8ff;
+}
+header nav ul{
+	display: flex;
+	justify-content: space-evenly;
+}
+header nav ul li{
+	margin-left: 85px;
+	list-style: none;
+	line-height: 50px;
+}
+header nav ul li a{
+	color: #35455e;
+	text-decoration: none;
+}
+header nav ul li button.profile{
+	padding: 5px;
+	background-color: #8ab9ff;
+	color: #6fa8ff;
+	border: none;
+	width: 50px;
+	font-size: 15px;
+	font-weight: bold;
+	border-radius: 10px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+header nav ul li button.signup{
+	padding: 15px;
+	background-color: #6fa8ff;
+	color: white;
+	border: none;
+	width: 100px;
+	font-size: 15px;
+	font-weight: bold;
+	border-radius: 10px;
+	margin-left: 10px;
+	margin-top: 0px;
+	cursor: pointer;
+}
+section{
+	width: 95%;
+	background-color: white;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+main div.banner{
+	width: 100%;
+	height: 350px;
+	margin-top: -30px;
+	overflow: hidden;
+	}
+main div.banner h1{
+	position: absolute;
+	font-family: Lora;
+	color: white;
+	top:150px;
+	left: 210px;
+	font-size: 50px;
+}
+main div.banner p{
+	position: absolute;
+	color: white;
+	font-size: 22px;
+	top: 250px;
+	left: 210px;
+}
+main div.search{
+	width: 700px;
+	height: 70px;
+	background-color: white;
+	position: absolute;
+	top: 390px;
+	left: 350px;
+	border-radius: 10px;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	box-sizing: border-box;
+	padding: 20px;
+	display: flex;
+}
+main div.search input{
+	width: 94%;
+	height: 100%;
+	margin-bottom: 20px;
+	font-size: 20px;
+	border: none;
+}
+main div.search input:focus{
+	outline: none;
+}
+main div.search img{
+	cursor: pointer;
+}
+main div.login-card{
+	width: 300px;
+	box-sizing: border-box;
+	padding: 30px;
+	padding-top: 50px;
+	height: 450px;
+	position: fixed;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	z-index: 2;
+	right: 20px;
+	background-color: white;
+	border-radius: 10px;
+	top: 100px;
+	text-align: center;
+	margin-top: -250px;
+	transition: 0.5s;
+	opacity: 0;
+}
+main div.login-card img{
+	width: 100px;
+}
+main div.login-card p{
+	color: #35455e;
+	margin-bottom: 100px;
+}
+main div.login-card button{
+	background-color: #6fa8ff;
+	color: white;
+	border: none;
+	padding: 10px;
+	width: 100%;
+}
+main div.login-appear{
+	opacity: 1;
+	margin-top: 0;
+}
+section.destination_list{
+	display: flex;
+	flex-wrap: wrap;
+}
+section.destination_list .destination_card{
+	width: 370px;
+	height: 270px;
+	background-color: black;
+	border-radius: 10px;
+	margin: 20px;
+}
+section.destination_list .destination_card img{
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	transition: 0.5s;
+}
+section.destination_list a{
+	text-decoration: none;
+	color: white;
+}
+section.destination_list .destination_card p{
+	margin-top: -80px;
+	margin-left: 50px;
+	opacity: 0;
+	font-size: 25px;
+	position: relative;
+	transition: 0.5s;
+}
+section.destination_list .destination_card img:hover{
+	filter: brightness(0.4);
+}
+section.destination_list .destination_card img:hover ~ p{
+	opacity: 1;
+}

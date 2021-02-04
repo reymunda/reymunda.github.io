@@ -362,7 +362,7 @@ main div.login-card{
 	padding: 30px;
 	padding-top: 50px;
 	height: 450px;
-	position: absolute;
+	position: fixed;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	z-index: 2;
 	right: 20px;
