@@ -2,8 +2,11 @@ const current = document.querySelector('#current');
 const imgs = document.querySelector('.imgs');
 const img = document.querySelectorAll('.imgs img');
 const opacity = 0.6;
-
-img[0].style.opacity = opacity;
+let profile = document.querySelector('.profile');
+let login = document.querySelector('.login-card');
+profile.addEventListener('click',() => {
+	login.classList.toggle('login-appear')
+})
 imgs.addEventListener('click',e => {
   img.forEach(img => (img.style.opacity = 1));
 
@@ -19,3 +22,4 @@ imgs.addEventListener('click',e => {
   // Mengganti opacity
   e.target.style.opacity = opacity;
 } );
+

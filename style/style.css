@@ -22,7 +22,7 @@ header nav{
 	margin-top: 20px;
 	font-weight: bold;
 	position: relative;
-	z-index: 2;
+	z-index: 3;
 }
 header nav h1{
 	font-family: Lora;
@@ -355,4 +355,40 @@ section#contact .navigate a:hover{
 }
 section#contact div.social_media img:hover{
 	transform: scale(1.1);
+}
+main div.login-card{
+	width: 300px;
+	box-sizing: border-box;
+	padding: 30px;
+	padding-top: 50px;
+	height: 450px;
+	position: absolute;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	z-index: 2;
+	right: 20px;
+	background-color: white;
+	border-radius: 10px;
+	top: 100px;
+	text-align: center;
+	margin-top: -250px;
+	transition: 0.5s;
+	opacity: 0;
+}
+main div.login-card img{
+	width: 100px;
+}
+main div.login-card p{
+	color: #35455e;
+	margin-bottom: 100px;
+}
+main div.login-card button{
+	background-color: #6fa8ff;
+	color: white;
+	border: none;
+	padding: 10px;
+	width: 100%;
+}
+main div.login-appear{
+	opacity: 1;
+	margin-top: 0;
 }

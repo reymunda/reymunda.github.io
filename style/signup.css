@@ -1,0 +1,111 @@
+body{
+	font-family: 'Roboto', sans-serif;
+	font-size: 17px;
+	margin: 0;
+	display: flex;
+}
+body img.bg{
+	position: absolute;
+	height: 100vh;
+	width: 50%;
+	z-index: 1;
+	transition: 1s;
+}
+body div{
+	flex: 1;
+	text-align: center;
+	max-height: 100vh;
+}
+body div form{
+	transition: 0.5s;
+}
+body div p{
+	color: grey;
+}
+form label{
+	font-weight: bold;
+	color: #6fa8ff;
+}
+form input{
+	width: 260px;
+	height: 40px;
+	margin-bottom: 40px;
+	background-color: #f1f1f1;
+	border: none;
+}
+form button{
+	width: 260px;
+	height: 40px;
+	color: white;
+	font-size: 18px;
+	background-color: #6fa8ff;
+	border: none;
+	line-height: 40px;
+	cursor: pointer;
+}
+div h1{
+	font-size: 40px;
+	color: #35455e;
+	font-family: Lora;
+}
+
+div.login_form h1{
+	margin-top: 150px;
+}
+div.signup_form h1{
+	margin-top: 150px;
+}
+div.signup_form input{
+	margin: 10px;
+}
+div.signup_form button{
+	margin-top: 20px;
+}
+div.signup_form img{
+	position: absolute;
+	width: 80px;
+	right: 300px;
+	top: 50px;
+}
+div.login_form img{
+	position: absolute;
+	width: 80px;
+	top: 50px;
+	left: 295px;
+}
+div.toggle{
+	height: 50px;
+	width: 200px;
+	position: absolute;
+	z-index: 3;
+	left: 580px;
+	top: 30px;
+	border-radius: 20px;
+	display: flex;
+}
+div.toggle button{
+	flex: 1;
+	font-size: 18px;
+	
+}
+div.toggle button.signup_button{
+	height: 40px;
+	width: 80px;
+	border-radius: 20px;
+	border: none;
+	background-color: #35455e;
+	color: white;
+	margin-top:5px;
+	transition: 0.3s
+}
+div.toggle button.login_button{
+	height: 40px;
+	width: 80px;
+	border-radius: 20px;
+	border: 2px solid #35455e;
+	background-color: transparent;
+	color: #35455e;
+	margin-top:5px;
+	transition: 0.3s
+}
+
