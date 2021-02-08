@@ -99,6 +99,9 @@ div.toggle button.signup_button{
 	margin-top:5px;
 	transition: 0.3s
 }
+div.toggle button.signup_button:focus{
+	outline: none;
+}
 div.toggle button.login_button{
 	height: 40px;
 	width: 80px;
@@ -109,4 +112,6 @@ div.toggle button.login_button{
 	margin-top:5px;
 	transition: 0.3s
 }
-
+div.toggle button.login_button:focus{
+	outline: none;
+}
