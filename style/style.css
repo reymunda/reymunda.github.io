@@ -3,9 +3,12 @@ html{
 }
 body{
 	font-family: 'Roboto', sans-serif;
-	font-size: 17px;
+	font-size: 1.07em;
 	margin: 0;
 	overflow-x: hidden;
+}
+.sidebar{
+	display: none;
 }
 section{
 	min-height: 100vh;
@@ -31,6 +34,7 @@ header nav h1{
 header nav ul{
 	display: flex;
 	justify-content: space-evenly;
+	margin-right: -90px;
 }
 header nav ul li{
 	margin-left: 85px;
@@ -45,13 +49,17 @@ header nav ul li a.white{
 	color: white;
 	font-weight: normal;
 }
+header nav ul li .hamburger{
+	display: none;
+}
+
 header nav ul li button.profile{
 	padding: 5px;
 	background-color: #8ab9ff;
 	color: #6fa8ff;
 	border: none;
 	width: 50px;
-	font-size: 15px;
+	font-size: 1.3em;
 	font-weight: bold;
 	border-radius: 10px;
 	margin-left: 10px;
@@ -63,7 +71,7 @@ header nav ul li button.signup{
 	color: #6fa8ff;
 	border: none;
 	width: 100px;
-	font-size: 15px;
+	font-size: 0.9em;
 	font-weight: bold;
 	border-radius: 10px;
 	margin-left: 10px;
@@ -76,7 +84,7 @@ main section#overview .destination{
 	margin-top: -50px;
 }
 main section#overview .destination h1{
-	font-size: 80px;
+	font-size: 4.67em;
 	color: #35455e;
 	font-family: Lora;
 }
@@ -176,7 +184,7 @@ main section#overview div.destination_search .destination_data form button{
 	width: 260px;
 	height: 50px;
 	color: white;
-	font-size: 18px;
+	font-size: 1.05em;
 	background-color: #6fa8ff;
 	border: none;
 	line-height: 50px;
@@ -207,7 +215,7 @@ section#features .features_overview h1{
 }
 section#features .features_overview p{
 	color: grey;
-	font-size: 18px;
+	font-size: 1.05em;
 }
 section#features .features_overview .features_card{
 	display: flex;
@@ -272,7 +280,7 @@ section#about .about_destinesia{
 	right: 150px;
 	top: 1670px;
 	width: 500px;
-	font-size: 25px;
+	font-size: 1.5em;
 	color: #35455e;
 	font-family: Lora;
 }
@@ -281,7 +289,7 @@ section#about .about_destinesia h1 span{
 }
 section#about .about_destinesia p{
 	text-align: justify;
-	font-size: 18px;
+	font-size: 0.71em;
 	font-family: Roboto;
 }
 section#contact{
@@ -295,18 +303,18 @@ section#contact .contact_me{
 }
 section#contact .contact_me a{
 	font-family: Roboto;
-	font-size: 20px;
+	font-size: 1em;
 	color: #cae2ea;
 	font-weight: bold;
 }
 section#contact h1{
 	font-family: Lora;
 	color: white;
-	font-size: 50px;
+	font-size: 3em;
 }
 section#contact p{
 	font-family: Roboto;
-	font-size: 20px;
+	font-size: 1.2em;
 	color: #cae2ea;
 	text-align: justify;
 }
@@ -391,4 +399,217 @@ main div.login-card button{
 main div.login-appear{
 	opacity: 1;
 	margin-top: 0;
+}
+
+@media screen and (max-width: 791px){
+	nav ul{
+		margin-right: 100px;
+	}
+	nav ul li{
+		transform: scale(1);
+		margin-left: 10px;
+		margin-right: -100px;
+	}
+	nav ul li.navigates{
+		display: none;
+	}
+	nav ul li a{
+		margin-left: 20px;
+	}
+	nav ul li button{
+		transform: scale(0.7);
+	}
+	nav ul li button.signup{
+		display: none;
+	}
+	nav ul li .hamburger{
+	padding: 5px;
+	background-color: #8ab9ff;
+	color: #6fa8ff;
+	border: none;
+	width: 30px;
+	font-size: 1.3em;
+	font-weight: bold;
+	height: 30px;
+	border-radius: 10px;
+	cursor: pointer;
+	}
+	main section#overview .destination h1{
+		font-size: 2.5em;
+		margin-bottom: 60px;
+		margin-top: 80px;
+	}
+	main section#overview .destination p.description{
+		font-size: 14px;
+	}
+	main section#overview div.destination_search{
+		width: 50%;
+	}
+	main section#overview div.destination_search .destination_data{
+		width: 80%;
+	}
+	main section#overview div.destination_search .destination_data form button{
+		transform: scale(0.8);
+		margin-top: -20px;
+	}
+	main section#overview div.destination_search .destination_data form input{
+		width: 90%;
+	}
+	main section#overview .destination .popular_overview{
+		transform: scale(0.7);
+		margin-left: -55px;
+	}
+	main section#overview .destination .popular_overview .card{
+		margin-left: 10px;
+	}
+	main section#overview .destination .destination_popular{
+		transform: scale(0.9);
+		margin-left: -50px;
+		margin-top: -20px;
+	}
+	section#features .features_overview .features_desc{
+		width: 80%;
+	}
+	section#features .features_overview .features_card{
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+	section#about .grey-box{
+		transform: scale(0.7);
+		margin-top: -200px;
+		position: relative;
+	}
+	section#about .white-box{
+		transform: scale(0.3);
+		margin-top: -200px;
+	}
+	section#about .about_destinesia{
+		transform: scale(0.9);
+		margin-top: 30px;
+	}
+	section#navigate{
+		transform: scale(0.5);
+	}
+}
+@media screen and (max-width: 600px){
+	header nav ul li .hamburger{
+		opacity: 1;
+		display: block;
+	}
+	ul li button.profile{
+		display: none;
+	}
+	.login-card{
+		display: none;
+	}
+	main .sidebar{
+		position: absolute;
+		width: 50%;
+		height: 90vh;
+		background-color: #6fa8ff;
+		z-index: 4;
+		right: 0;
+		box-sizing: border-box;
+		padding: 20px;
+	}
+	.sidebar ul{
+		list-style: none;
+	}
+	.sidebar ul li{
+		margin-bottom: 20px;
+	}
+	.sidebar ul li a{
+			color: #35455e;
+			text-decoration: none;
+	}
+	.sidebar ul li button.profile{
+			padding: 5px;
+			background-color: #8ab9ff;
+			color: #6fa8ff;
+			border: none;
+			width: 50px;
+			font-size: 1.3em;
+			font-weight: bold;
+			border-radius: 10px;
+			margin-left: 10px;
+			cursor: pointer;
+		}
+	.sidebar ul li button.signup{
+			padding: 15px;
+			background-color: white;
+			color: #6fa8ff;
+			border: none;
+			width: 100px;
+			font-size: 0.9em;
+			font-weight: bold;
+			border-radius: 10px;
+			margin-left: 10px;
+			margin-top: 0px;
+			cursor: pointer;
+		}
+	.sidebar ul li button.profile{
+		display: none;
+	}
+	section#overview{
+		border: 1px solid black;
+	}
+	section#overview .destination h1{
+		position: absolute;
+		width: 400px;
+		top: 50px;
+	}
+	section#overview .destination .description{
+		position: absolute;
+		width: 400px;
+		top: 300px;
+		left: 50px;
+		width: 70%;
+	}
+	section#about{
+		border: 1px solid black;
+	}
+	section#overview div.destination_search{
+		display: none;
+	}
+	section#about .grey-box{
+		display: none;
+	}
+	section#about .white-box{
+		top: 2600px;
+		left: 10px;
+	}
+	section#about .about_destinesia{
+		top: 2630px;
+		left: 20px;
+		transform: scale(0.8);
+		text-align: center;
+		width: 90%;
+	}
+	section#features .features_overview .features_desc{
+		width: 100%;
+	}
+	section#contact{
+		padding: 10px;
+		width: 100%;
+	}
+	section#contact .contact_me{
+		transform: scale(0.9);
+		width: 100%;
+	}
+	main section#overview .destination .destination_popular{
+		top: 450px;
+		left: 40px;
+	}
+	main section#overview .destination .destination_popular a{
+		margin-left: 230px;
+	}
+	main section#overview .destination .popular_overview{
+		transform: scale(0.85);
+	}
+	main section#overview .destination .popular_overview p{
+		font-size: 15px;
+	}
+	main section#overview .destination .popular_overview .card{
+		margin-top: 400px;
+	}
 }
