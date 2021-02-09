@@ -4,11 +4,6 @@ const img = document.querySelectorAll('.imgs img');
 const opacity = 0.6;
 let profile = document.querySelector('.profile');
 let login = document.querySelector('.login-card');
-let hamburger = document.querySelector('.hamburger');
-let sidebar = document.querySelector('.sidebar');
-hamburger.addEventListener('click',() => {
-  sidebar.classList.toggle('slide');
-})
 profile.addEventListener('click',() => {
 	login.classList.toggle('login-appear')
 })
@@ -28,5 +23,4 @@ imgs.addEventListener('click',e => {
   e.target.style.opacity = opacity;
 } );
 
-//Event pada hamburger menu
 
