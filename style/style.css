@@ -8,7 +8,6 @@ body{
 	overflow-x: hidden;
 }
 .sidebar{
-	display: none;
 }
 section{
 	min-height: 100vh;
@@ -402,6 +401,9 @@ main div.login-appear{
 }
 
 @media screen and (max-width: 791px){
+	body{
+		overflow-x: hidden;
+	}
 	nav ul{
 		margin-right: 100px;
 	}
@@ -492,10 +494,13 @@ main div.login-appear{
 	}
 }
 @media screen and (max-width: 600px){
-	header nav ul li .hamburger{
-		opacity: 1;
-		display: block;
+	body{
+		overflow-x: hidden;
 	}
+	header nav ul li .hamburger{
+		display: block;
+		margin-left: -230px;
+			}
 	ul li button.profile{
 		display: none;
 	}
@@ -511,15 +516,21 @@ main div.login-appear{
 		right: 0;
 		box-sizing: border-box;
 		padding: 20px;
+		font-size: 20px;
+		transform: translateX(300px);
+		transition: 0.5s;
 	}
+	main .sidebar.slide{
+		transform: translateX(0);
+	} 
 	.sidebar ul{
 		list-style: none;
 	}
 	.sidebar ul li{
-		margin-bottom: 20px;
+		margin-bottom: 30px;
 	}
 	.sidebar ul li a{
-			color: #35455e;
+			color: white;
 			text-decoration: none;
 	}
 	.sidebar ul li button.profile{
@@ -543,15 +554,12 @@ main div.login-appear{
 			font-size: 0.9em;
 			font-weight: bold;
 			border-radius: 10px;
-			margin-left: 10px;
-			margin-top: 0px;
+			margin-left: -10px;
+			margin-top: 50px;
 			cursor: pointer;
 		}
 	.sidebar ul li button.profile{
 		display: none;
-	}
-	section#overview{
-		border: 1px solid black;
 	}
 	section#overview .destination h1{
 		position: absolute;
@@ -564,9 +572,6 @@ main div.login-appear{
 		top: 300px;
 		left: 50px;
 		width: 70%;
-	}
-	section#about{
-		border: 1px solid black;
 	}
 	section#overview div.destination_search{
 		display: none;
