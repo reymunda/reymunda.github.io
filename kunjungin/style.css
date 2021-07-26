@@ -1,0 +1,141 @@
+.navbar{
+	background-color: white;	
+}
+section{
+	height: 100vh;
+}
+h1,h2,h3{
+	font-family: 'Itim', cursive;
+	color: #35455e;
+}
+p,a{
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.1rem;
+	color: grey;
+}
+nav li{
+	padding-left: 25px;
+	padding-right: 25px;
+}
+nav ul li a{
+	font-weight: bold;
+	color: #35455e;
+}
+nav .container a.navbar-brand {
+	font-family: 'Itim', cursive;
+	font-size: 2rem;
+	color: #6fa8ff;
+}
+section#jumbotron{
+	height: 65vh;
+}
+section#jumbotron .row{
+	height: 70vh;
+	display: flex;
+	align-items: center;
+}
+section#jumbotron h1{
+	font-size: 3.7rem;
+	opacity: 0;
+}
+section#jumbotron p{
+	opacity: 0;
+}
+section#jumbotron h1 span{
+	color: #6fa8ff;
+}
+#features{
+	background-color: #6fa8ff;
+	height: 100vh;
+}
+#features .row{
+	padding-left: 25px;
+	padding-right: 25px;
+}
+#features h2{
+	color: #ffffff;
+	font-size: 2.5rem;
+}
+#features p:nth-child(1){
+	color: white;
+}
+#features .feature{
+	margin-left: 15px;
+	margin-right: 15px;
+	padding: 20px;
+	margin-bottom: 30px;
+	height: 220px;
+}
+#features .feature h2{
+	font-size: 2rem;
+	color: #35455e;
+}
+#features .one{
+	background-color: #ddf6fd;
+}
+#features img{
+	position: relative;
+	width: 60px;
+	top: 20px;
+	left: 30px;
+	height: 60px;
+}
+#features .two{
+	background-color: #fff6d7;
+}
+#features .three{
+	background-color: #dcf7e8;
+}
+#features .four{
+	background-color: #ebdcf9;
+}
+section#aboutpage{
+	background-color: white;
+	height: 110vh;
+}
+section#aboutpage .container{
+	padding-right: 20px;
+	padding-left: 20px;
+}
+section#aboutpage img{
+	margin-right: 20px;
+	padding: 0;
+	border-radius: 30px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+	border: 5px solid #6fa8ff;
+}
+
+section#aboutpage h2{
+	margin-top: 40px;
+	font-size: 2rem;
+}
+section#aboutpage h2 span{
+	color: #6fa8ff;
+}
+section#aboutus{
+	background-color: #35455e;
+}
+section#aboutus h2{
+	color: #ffffff;
+	font-size: 3rem;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+section#aboutus p,h3{
+	color: #cae2ea;
+}
+@media screen and (max-width: 600px){
+	section#jumbotron h1{
+		font-size: 2.2rem;
+		height: 100px;
+	}
+	#features{
+		height: 200vh;
+	}
+	section#aboutus{
+		text-align: center;
+	}
+	section#aboutus h3{
+		font-size: 1.4rem;
+	}
+}
