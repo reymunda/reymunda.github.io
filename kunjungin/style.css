@@ -1,6 +1,9 @@
 .navbar{
 	background-color: white;	
 }
+.addShadow{
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
 section{
 	height: 100vh;
 }
@@ -19,7 +22,17 @@ nav li{
 }
 nav ul li a{
 	font-weight: bold;
-	color: #35455e;
+}
+nav ul li a button{
+	background-color: #6fa8ff;
+	height: 2.3em;
+	color: white;
+	width: 7em;
+	border: none;
+	border-radius: 15px;
+}
+nav ul li a button:active{
+	transform: scale(0.95);
 }
 nav .container a.navbar-brand {
 	font-family: 'Itim', cursive;
@@ -125,6 +138,9 @@ section#aboutus p,h3{
 	color: #cae2ea;
 }
 @media screen and (max-width: 600px){
+	.navbar-brand{
+		transform: scale(0.8);
+	}
 	section#jumbotron h1{
 		font-size: 2.2rem;
 		height: 100px;

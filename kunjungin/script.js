@@ -23,8 +23,8 @@ window.addEventListener('load',() =>{
 window.addEventListener('scroll',() => {
     let navbar = document.querySelector('nav');
     navbar.style.transition = '0.5s';
-    navbar.classList.add('shadow-sm');
+    navbar.classList.add('addShadow');
     setTimeout(() =>{
-        navbar.classList.remove('shadow-sm');
+        navbar.classList.remove('addShadow');
     },3000)
 })
