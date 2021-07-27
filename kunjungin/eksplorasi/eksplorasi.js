@@ -1,15 +1,11 @@
-let h1 = document.querySelector('.main h1'),
-    menu = document.querySelectorAll('.col-md-2 div');
-h1.style.opacity = 0;
-h1.style.transition = '1s';
-menu.forEach(e => {
-    e.style.opacity = 0;
-    e.style.transition = '1s';
-})
-
-
 window.addEventListener('load',() =>{
+    let h1 = document.querySelector('.main h1'),
+    menu = document.querySelectorAll('.col-md-2 div');
+    h1.style.transition = '1.5s';
     h1.style.opacity = 1;
+    menu.forEach(e => {
+        e.style.transition = '1.5s'
+    })
     menu.forEach(e => {
         e.style.opacity = 1;
     })
@@ -19,12 +15,12 @@ window.addEventListener('load',() =>{
     setTimeout(() => {
         h1.textContent = 'Silakan pilih salah satu fitur ini!';
         h1.style.opacity = 1;
-    },4000)
+    },4500)
     setTimeout(() => {
         h1.style.opacity = 0;
-    },7000)
+    },7500)
     setTimeout(() => {
         h1.textContent = 'Semoga membantu ^_^';
         h1.style.opacity = 1;
-    },8000)
+    },9000)
 })

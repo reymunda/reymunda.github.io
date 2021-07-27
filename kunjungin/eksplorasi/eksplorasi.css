@@ -14,13 +14,19 @@ section .container .menu{
     margin-top: 30px;
     text-align: center;
 }
+
 section .container .menu img{
     width: 4em;
     height: 4em;
 }
+section .main .col-md-12 h1{
+    opacity: 0;
+    height: 80px;
+}
 .col-md-2 div{
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    opacity: 0;
 }
 @media screen and (max-width: 600px){
     nav{
