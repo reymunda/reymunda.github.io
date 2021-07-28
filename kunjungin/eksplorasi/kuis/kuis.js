@@ -110,6 +110,7 @@ answer.forEach((e) => {
         }
         if(i == questions.length){
             let menus = document.querySelector('.menus');
+            questionCase.textContent = "Yes! Kuis telah selesai ^_^";
             menus.style.height = '375px';
             menus.style.backgroundColor = '#6fa8ff';
             menus.innerHTML = `<h1 class="text-center" style="line-height:330px;color:white;">Skor kamu adalah: ${point}/5</h1>`;
