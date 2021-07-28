@@ -11,16 +11,16 @@ window.addEventListener('load',() =>{
     })
     setTimeout(() => {
         h1.style.opacity = 0;
-    },3000)
+    },2000)
     setTimeout(() => {
         h1.textContent = 'Silakan pilih salah satu fitur ini!';
         h1.style.opacity = 1;
-    },4500)
+    },3500)
     setTimeout(() => {
         h1.style.opacity = 0;
-    },7500)
+    },6500)
     setTimeout(() => {
         h1.textContent = 'Semoga membantu ^_^';
         h1.style.opacity = 1;
-    },9000)
+    },8000)
 })
