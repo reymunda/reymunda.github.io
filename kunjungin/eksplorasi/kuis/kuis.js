@@ -1,9 +1,9 @@
-// let menus = document.querySelector('.menus');
-// menus.style.height = '375px';
-// menus.style.backgroundColor = '#6fa8ff';
-// menus.innerHTML = `<h1 class="text-center" style="line-height:330px;color:white;">Skor kamu adalah: 5/5</h1>`;
+window.addEventListener('load',() =>{
+    loadQuestion(i)
+})
 
 let point = 0,
+    i = 0,
     questions = [
         {
             question: "Yang dijuluki kota kembang?",
@@ -92,6 +92,30 @@ let point = 0,
             ]
         }
     ],
-    answer = document.querySelectorAll('.answer');
+    answer = document.querySelectorAll('.answer p'),
+    questionCase = document.getElementById('question');
+    
+const loadQuestion = (i) => {
+    questionCase.textContent = questions[i].question;
+    questions[i].option.forEach((e,i) => {
+        answer[i].textContent = e.answer;
+        answer[i].id = e.isCorrect;
+    })
+}
+answer.forEach((e) => {
+    e.addEventListener('click',() =>{
+        i++
+        if(e.id === "true"){
+            point++
+        }
+        if(i == questions.length){
+            let menus = document.querySelector('.menus');
+            menus.style.height = '375px';
+            menus.style.backgroundColor = '#6fa8ff';
+            menus.innerHTML = `<h1 class="text-center" style="line-height:330px;color:white;">Skor kamu adalah: ${point}/5</h1>`;
+        }else{
+            loadQuestion(i)
+        }
+    })
+})
 
-    console.log(answer)
