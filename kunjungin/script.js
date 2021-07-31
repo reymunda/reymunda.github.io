@@ -14,7 +14,6 @@ window.addEventListener('load',() =>{
     let changingProvince = setInterval(() => {
             span.textContent = provinsi[i];
             i++
-            console.log(provinsi[i]);
             if(i === 35){
                 clearInterval(changingProvince)
             }
