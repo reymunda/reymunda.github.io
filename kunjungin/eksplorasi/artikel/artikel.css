@@ -43,6 +43,9 @@
    .navbar-brand{
       transform: scale(0.8); 
     }
+    .nav-item:last-child{
+        width: 40%;
+	}
     li.nav-item{
        transform: scale(0.8);
        position: absolute;
