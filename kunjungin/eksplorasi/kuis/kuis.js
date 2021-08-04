@@ -92,6 +92,7 @@ let point = 0,
             ]
         }
     ],
+    choice = document.querySelectorAll('.answer'),
     answer = document.querySelectorAll('.answer p'),
     questionCase = document.getElementById('question');
     
@@ -99,10 +100,10 @@ const loadQuestion = (i) => {
     questionCase.textContent = questions[i].question;
     questions[i].option.forEach((e,i) => {
         answer[i].textContent = e.answer;
-        answer[i].id = e.isCorrect;
+        choice[i].id = e.isCorrect;
     })
 }
-answer.forEach((e) => {
+choice.forEach((e) => {
     e.addEventListener('click',() =>{
         i++
         if(e.id === "true"){
