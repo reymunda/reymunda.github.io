@@ -35,8 +35,6 @@ section .container .menu{
 
 }
 @media screen and (max-width: 600px){
-    nav{
-    }
    .navbar-brand{
       transform: scale(0.8); 
     }
