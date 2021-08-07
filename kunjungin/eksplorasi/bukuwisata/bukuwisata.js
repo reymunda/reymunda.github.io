@@ -1,4 +1,5 @@
 let plans = [],
+    donePlan = [],
     i = 0,
     destination = document.querySelector('#inputDestination'),
     date = document.querySelector('#inputDate'),
@@ -57,16 +58,14 @@ submitButton.addEventListener('click',e => {
 activityDesc = (plan) => {
     let activityDesc = document.querySelector('#activityDesc')
     activityDesc.innerHTML = `<p>${plan}</p>`
-    console.log('tes')
 }
 impressionDesc = (plan) => {
     let impressionDesc = document.querySelector('#impressionDesc')
     impressionDesc.innerHTML = `<p>${plan}</p>`
-    console.log('tes')
 }
-showData = (e,i) => {
+showData = (e) => {
     activityPlan.innerHTML += `<tr id="${e.id}">  
-        <td><p>${i}</p></td>
+        <td><p>${plans.length}</p></td>
         <td><p>${e.dest}</p></td>
         <td><p>${e.dat}</p></td>
         <td><p>${e.per}</p></td>
@@ -74,31 +73,34 @@ showData = (e,i) => {
             Lihat
           </button></td>
           <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#Activitydone" onClick="impression('${e.id}')">
-            Simpan
+            Selesai
           </button></td>
     </tr>`
 }
 impression = (id) => {
-    let i = 0,
         done = document.querySelector('#Activitydone')
     saveImpression.addEventListener('click',() => {
         let plan = plans.find(e => {
-            return e.id === parseInt(id)
+            return e.id == parseInt(id)
         })
-        plan.imp = impressionArea.value
-        console.log(plan)
-        let actPlan = document.getElementById(id)
-        actPlan.remove()
-        activityDone.innerHTML += `<tr>  
-        <td><p>${i}</p></td>
-        <td><p>${plan.dest}</p></td>
-        <td><p>${plan.dat}</p></td>
-        <td><p>${plan.per}</p></td>
-        <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#activity" onClick="activityDesc('${plan.act}')" id="activityButton">
-        Lihat
-        </button></td>
-        <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#impression" onClick="impressionDesc('${plan.imp}')">Lihat</button></td>
-        </tr>`
+        try{
+          plan.imp = impressionArea.value
+          let actPlan = document.getElementById(id)
+          actPlan.style.display = 'none'
+          plans.splice(plans.indexOf(plan),1)
+          donePlan.push(plan)
+          activityDone.innerHTML += `<tr id="${plan.id}">  
+          <td><p>${donePlan.length}</p></td>
+          <td><p>${plan.dest}</p></td>
+          <td><p>${plan.dat}</p></td>
+          <td><p>${plan.per}</p></td>
+          <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#activity" onClick="activityDesc('${plan.act}')" id="activityButton">
+          Lihat
+          </button></td>
+          <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#impression" onClick="impressionDesc('${plan.imp}')">Lihat</button></td>
+          </tr>`
+        }catch(error){
+        }
     })
     impressionArea.value = ""
 }
