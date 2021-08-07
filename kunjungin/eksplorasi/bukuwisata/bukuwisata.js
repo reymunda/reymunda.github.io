@@ -1,5 +1,28 @@
-let plans = [],
-    donePlan = [],
+const doneActivity = 'DONE_ACTIVITY_DATA',
+planActivity = 'PLAN_ACTIVITY_DATA'
+window.addEventListener('load',() => {
+  if(typeof(Storage) != undefined){
+    if(localStorage.getItem(doneActivity) === null){
+      localStorage.setItem(doneActivity,'[]')
+      doneData = []
+    }else{
+      doneData = JSON.parse(localStorage.getItem(doneActivity))
+      doneData.forEach(done => {
+        showDoneData(done)
+      })
+    }if(localStorage.getItem(planActivity) === null){
+      localStorage.setItem(planActivity,'[]')
+      planData = []
+    }else{
+        planData = JSON.parse(localStorage.getItem(planActivity))
+        planData.forEach(plan => {
+        showPlanData(plan)
+      })
+    }
+  }
+})
+let doneData,
+    planData,
     i = 0,
     destination = document.querySelector('#inputDestination'),
     date = document.querySelector('#inputDate'),
@@ -44,9 +67,10 @@ submitButton.addEventListener('click',e => {
             imp: null,
             act: activity.value
         }
-        plans.push(plan)
+        planData.push(plan)
+        localStorage.setItem(planActivity,JSON.stringify(planData))
         i++
-        showData(plan,i)
+        showPlanData(plan)
         destination.value = ""
         date.value = ""
         person.value = ""
@@ -63,9 +87,9 @@ impressionDesc = (plan) => {
     let impressionDesc = document.querySelector('#impressionDesc')
     impressionDesc.innerHTML = `<p>${plan}</p>`
 }
-showData = (e) => {
+showPlanData = (e) => {
     activityPlan.innerHTML += `<tr id="${e.id}">  
-        <td><p>${plans.length}</p></td>
+        <td><p>${planData.indexOf(e)+1}</p></td>
         <td><p>${e.dest}</p></td>
         <td><p>${e.dat}</p></td>
         <td><p>${e.per}</p></td>
@@ -77,30 +101,32 @@ showData = (e) => {
           </button></td>
     </tr>`
 }
-impression = (id) => {
-        done = document.querySelector('#Activitydone')
-    saveImpression.addEventListener('click',() => {
-        let plan = plans.find(e => {
-            return e.id == parseInt(id)
-        })
-        try{
-          plan.imp = impressionArea.value
-          let actPlan = document.getElementById(id)
-          actPlan.style.display = 'none'
-          plans.splice(plans.indexOf(plan),1)
-          donePlan.push(plan)
-          activityDone.innerHTML += `<tr id="${plan.id}">  
-          <td><p>${donePlan.length}</p></td>
-          <td><p>${plan.dest}</p></td>
-          <td><p>${plan.dat}</p></td>
-          <td><p>${plan.per}</p></td>
-          <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#activity" onClick="activityDesc('${plan.act}')" id="activityButton">
+showDoneData = (e) => {
+  activityDone.innerHTML += `<tr id="${e.id}">  
+          <td><p>${doneData.indexOf(e)+1}</p></td>
+          <td><p>${e.dest}</p></td>
+          <td><p>${e.dat}</p></td>
+          <td><p>${e.per}</p></td>
+          <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#activity" onClick="activityDesc('${e.act}')" id="activityButton">
           Lihat
           </button></td>
-          <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#impression" onClick="impressionDesc('${plan.imp}')">Lihat</button></td>
+          <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#impression" onClick="impressionDesc('${e.imp}')">Lihat</button></td>
           </tr>`
-        }catch(error){
-        }
+}
+impression = (id) => {
+    saveImpression.addEventListener('click',() => {
+        let plan = planData.filter(e => {
+          return e.id === parseInt(id)
+        })
+        console.log(plan)
+          plan[0].imp = impressionArea.value
+          let actPlan = document.getElementById(id)
+          planData.splice(planData.indexOf(plan[0]),1)
+          doneData.push(plan[0])
+          localStorage.setItem(planActivity,JSON.stringify(planData))
+          localStorage.setItem(doneActivity,JSON.stringify(doneData))
+          showDoneData(plan[0])
+          location.reload()
     })
     impressionArea.value = ""
 }
